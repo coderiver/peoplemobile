@@ -1,0 +1,16 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		block title
+			title Template
+		meta(name="viewport" content="initial-scale=1")
+		link(rel="stylesheet" media="screen" href="css/screen.css")
+	body
+		block header
+			include _header.jade
+		block content
+		block footer
+
+		//load scripts
+		script(src="js/lib/head.js" data-headjs-load="js/init.js")

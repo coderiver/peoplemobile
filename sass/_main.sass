@@ -1,7 +1,145 @@
-// Normally mainpage styles
+.promo
+	margin-bottom: 16px
+	height: 241px
+	text-align: center
+	background-color: #593B69
+	// @include background-image(linear-gradient(to top, #572761 0%, #6B2F79 100%))
+	background: url(../img/promo-bg.jpg) 50% 50% no-repeat
+	+vertical
 
+.title
+	+proximabold
+	text-transform: uppercase
+	+fs(52)
 
+	&.title_promo
+		display: inline-block
+		vertical-align: middle
+		color: #FFF
+		+fs(120)
+		text-decoration: none
+		.arrow
+			display: inline-block
+			+s(arrow)
+			font-size: 0
+			margin-left: 47px
 
+	&.title_news
+		margin: 16px 0 14px
+		display: block
+		color: $violet
+		+fs(52)
+		text-align: center
+		overflow: hidden
+		span
+			display: inline-block
+			vertical-align: middle
+			margin: 0 17px
+			position: relative
+			&:before, &:after
+				content: ""
+				display: block
+				position: absolute
+				top: 50%
+				width: 500px
+				height: 2px
+				background: $violet
+			&:before
+				left: -517px
+			&:after
+				right: -517px
+
+.wrap
+	padding: 0 20px 19px
+
+.slider
+
+.slider__slide
+	font-size: 0
+
+.slider__dots
+	font-size: 0
+	text-align: center
+	margin: 20px 0 19px
+	ul
+		display: inline-block
+	li
+		display: inline-block
+		margin-right: 5px
+		width: 13px
+		height: 13px
+		border-radius: 50%
+		background: #aaa7a6
+		&:last-child
+			margin-right: 0
+		&.is-active
+			background: #403f3f
+
+.box
+	display: block
+	height: 295px
+	overflow: hidden
+	border-radius: $radius
+	position: relative
+	text-decoration: none
+	img
+		display: block
+	&.box_half-left, &.box_half-right
+		display: inline-block
+		width: 295/600*100%
+		+box
+	&.box_half-left
+		margin-right: 5/600*100%
+	&.box_half-right
+		margin-left: 5/600*100%
+
+.box__footer
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	line-height: 50px
+	padding: 0 15px
+	color: #FFF
+	+fs(34)
+	text-transform: uppercase
+	&.green
+		@include background-image(linear-gradient(bottom, #7ea91b 0%, #a7d53d 100%))
+	&.yellow
+		@include background-image(linear-gradient(bottom, #cd881c 0%, #f7bf3b 100%))
+
+.ico
+	display: inline-block
+	margin-right: 10px
+	position: relative
+	&.ico_music
+		+s(music)
+	&.ico_tv
+		+s(tv)
+
+.category
+	li:not(:last-child)
+		margin-bottom: 13px
+	.category__item
+		display: block
+		position: relative
+		line-height: 113px
+		padding: 0 37px
+		@include background-image(linear-gradient(to top, #572761 0%, #6B2F79 100%))
+		color: #FFF
+		+fs(60)
+		text-decoration: none
+		text-transform: uppercase
+		border-radius: $radius
+		&:after
+			content: ""
+			position: absolute
+			z-index: 2
+			top: 0
+			right: 0
+			bottom: 0
+			+s(tick)
+			opacity: 0.5
 
 
 

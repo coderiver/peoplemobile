@@ -1,7 +1,6 @@
 .promo
 	margin-bottom: 16px
 	height: 241px
-	text-align: center
 	background-color: #593B69
 	// @include background-image(linear-gradient(to top, #572761 0%, #6B2F79 100%))
 	background: url(../img/promo-bg.jpg) 50% 50% no-repeat
@@ -15,14 +14,22 @@
 	&.title_promo
 		display: inline-block
 		vertical-align: middle
+		position: relative
 		color: #FFF
 		+fs(120)
 		text-decoration: none
 		.arrow
-			display: inline-block
+			// display: inline-block
 			+s(arrow)
 			font-size: 0
-			margin-left: 47px
+			// margin-left: 47px
+			position: absolute
+			top: 50%
+			right: -93px
+			margin-top: -36px
+
+	&.title_promo-small
+		+fs(88)
 
 	&.title_news
 		margin: 16px 0 14px
@@ -51,6 +58,8 @@
 
 .wrap
 	padding: 0 20px 19px
+.header + .wrap
+	margin-top: 20px
 
 .slider
 
@@ -84,12 +93,17 @@
 	text-decoration: none
 	img
 		display: block
+
 	&.box_half-left, &.box_half-right
 		display: inline-block
 		width: 295/600*100%
 		+box
+		&:nth-child(1n+3)
+			margin-top: 11px
+
 	&.box_half-left
 		margin-right: 5/600*100%
+
 	&.box_half-right
 		margin-left: 5/600*100%
 
@@ -107,6 +121,11 @@
 		@include background-image(linear-gradient(bottom, #7ea91b 0%, #a7d53d 100%))
 	&.yellow
 		@include background-image(linear-gradient(bottom, #cd881c 0%, #f7bf3b 100%))
+	&.blue
+		@include background-image(linear-gradient(bottom, #0a96c7 0%, #45c1eb 100%))
+	&.violet
+		@include background-image(linear-gradient(bottom, #a2379b 0%, #c35ebd 100%))
+
 
 .ico
 	display: inline-block
@@ -116,6 +135,11 @@
 		+s(music)
 	&.ico_tv
 		+s(tv)
+	&.ico_movies
+		+s(movies)
+	&.ico_style
+		+s(style)
+
 
 .category
 	li:not(:last-child)

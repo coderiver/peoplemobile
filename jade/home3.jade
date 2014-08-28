@@ -4,38 +4,31 @@ block title
 	title Home
 
 block content
-	//begin promo
-	.promo
-		a(href="#").title.title_promo vote
-			i.arrow
-		//begin category
-		.category
-			ul
-				li
-					a(href="#").category__item movies
-				li
-					a(href="#").category__item tv
-				li
-					a(href="#").category__item music
-		//end category
-	//end promo
 	//begin wrap
 	.wrap
-		h1.title.title_news
-			span news
 		//begin slider
 		.slider
 			.slider__slide
 				a(href="#").box.box_half-left
 					img(src="http://placehold.it/295x295")
+					.box__footer.blue
+						i.ico.ico_movies
+						| Movies
+				a(href="#").box.box_half-right
+					img(src="http://placehold.it/295x295")
+					.box__footer.violet
+						i.ico.ico_style
+						| Style
+				a(href="#").box.box_half-left
+					img(src="http://placehold.it/295x295")
 					.box__footer.yellow
 						i.ico.ico_music
-						| MUSIC
+						| Music
 				a(href="#").box.box_half-right
 					img(src="http://placehold.it/295x295")
 					.box__footer.green
 						i.ico.ico_tv
-						| TV
+						| Tv
 			.slider__dots
 				ul
 					li

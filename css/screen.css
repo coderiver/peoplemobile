@@ -27,21 +27,22 @@ body { font-family: "Roboto-Regular", Arial, sans-serif; font-size: 14px; line-h
 
 .header { background: white; font-size: 0; padding: 26px 0 25px; text-align: center; position: relative; }
 
-.logo { display: inline-block; vertical-align: middle; background: url('../img/icons-s1a8a19d0f1.png') 0 -112px no-repeat; width: 269px; height: 28px; }
+.logo { display: inline-block; vertical-align: middle; background: url('../img/icons-s36d7007528.png') 0 -112px no-repeat; width: 269px; height: 28px; }
 
-.nav-btn { position: absolute; top: 27px; left: 20px; background: url('../img/icons-s1a8a19d0f1.png') 0 -150px no-repeat; width: 33px; height: 26px; cursor: pointer; }
+.nav-btn { position: absolute; top: 27px; left: 20px; background: url('../img/icons-s36d7007528.png') 0 -150px no-repeat; width: 33px; height: 26px; cursor: pointer; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.promo { margin-bottom: 16px; height: 241px; text-align: center; background-color: #593b69; background: url(../img/promo-bg.jpg) 50% 50% no-repeat; text-align: center; font-size: 0; }
+.promo { margin-bottom: 16px; height: 241px; background-color: #593b69; background: url(../img/promo-bg.jpg) 50% 50% no-repeat; text-align: center; font-size: 0; }
 .promo:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 
 .title { font-family: "ProximaNova-Bold"; font-weight: normal; text-transform: uppercase; font-size: 52px; font-size: 5.2rem; }
-.title.title_promo { display: inline-block; vertical-align: middle; color: white; font-size: 120px; font-size: 12rem; text-decoration: none; }
-.title.title_promo .arrow { display: inline-block; background: url('../img/icons-s1a8a19d0f1.png') 0 0 no-repeat; width: 47px; height: 72px; font-size: 0; margin-left: 47px; }
+.title.title_promo { display: inline-block; vertical-align: middle; position: relative; color: white; font-size: 120px; font-size: 12rem; text-decoration: none; }
+.title.title_promo .arrow { background: url('../img/icons-s36d7007528.png') 0 0 no-repeat; width: 47px; height: 72px; font-size: 0; position: absolute; top: 50%; right: -93px; margin-top: -36px; }
+.title.title_promo-small { font-size: 88px; font-size: 8.8rem; }
 .title.title_news { margin: 16px 0 14px; display: block; color: #572761; font-size: 52px; font-size: 5.2rem; text-align: center; overflow: hidden; }
 .title.title_news span { display: inline-block; vertical-align: middle; margin: 0 17px; position: relative; }
 .title.title_news span:before, .title.title_news span:after { content: ""; display: block; position: absolute; top: 50%; width: 500px; height: 2px; background: #572761; }
@@ -49,6 +50,8 @@ body { font-family: "Roboto-Regular", Arial, sans-serif; font-size: 14px; line-h
 .title.title_news span:after { right: -517px; }
 
 .wrap { padding: 0 20px 19px; }
+
+.header + .wrap { margin-top: 20px; }
 
 .slider__slide { font-size: 0; }
 
@@ -61,17 +64,22 @@ body { font-family: "Roboto-Regular", Arial, sans-serif; font-size: 14px; line-h
 .box { display: block; height: 295px; overflow: hidden; border-radius: 7px; position: relative; text-decoration: none; }
 .box img { display: block; }
 .box.box_half-left, .box.box_half-right { display: inline-block; width: 49.16667%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.box.box_half-left:nth-child(1n+3), .box.box_half-right:nth-child(1n+3) { margin-top: 11px; }
 .box.box_half-left { margin-right: 0.83333%; }
 .box.box_half-right { margin-left: 0.83333%; }
 
 .box__footer { position: absolute; bottom: 0; left: 0; right: 0; line-height: 50px; padding: 0 15px; color: white; font-size: 34px; font-size: 3.4rem; text-transform: uppercase; }
 .box__footer.green { background-image: -moz-linear-gradient(bottom, #7ea91b 0%, #a7d53d 100%); background-image: -webkit-linear-gradient(bottom, #7ea91b 0%, #a7d53d 100%); background-image: linear-gradient(to top, #7ea91b 0%, #a7d53d 100%); }
 .box__footer.yellow { background-image: -moz-linear-gradient(bottom, #cd881c 0%, #f7bf3b 100%); background-image: -webkit-linear-gradient(bottom, #cd881c 0%, #f7bf3b 100%); background-image: linear-gradient(to top, #cd881c 0%, #f7bf3b 100%); }
+.box__footer.blue { background-image: -moz-linear-gradient(bottom, #0a96c7 0%, #45c1eb 100%); background-image: -webkit-linear-gradient(bottom, #0a96c7 0%, #45c1eb 100%); background-image: linear-gradient(to top, #0a96c7 0%, #45c1eb 100%); }
+.box__footer.violet { background-image: -moz-linear-gradient(bottom, #a2379b 0%, #c35ebd 100%); background-image: -webkit-linear-gradient(bottom, #a2379b 0%, #c35ebd 100%); background-image: linear-gradient(to top, #a2379b 0%, #c35ebd 100%); }
 
 .ico { display: inline-block; margin-right: 10px; position: relative; }
-.ico.ico_music { background: url('../img/icons-s1a8a19d0f1.png') 0 -186px no-repeat; width: 30px; height: 26px; }
-.ico.ico_tv { background: url('../img/icons-s1a8a19d0f1.png') 0 -346px no-repeat; width: 31px; height: 27px; }
+.ico.ico_music { background: url('../img/icons-s36d7007528.png') 0 -220px no-repeat; width: 30px; height: 26px; }
+.ico.ico_tv { background: url('../img/icons-s36d7007528.png') 0 -415px no-repeat; width: 31px; height: 27px; }
+.ico.ico_movies { background: url('../img/icons-s36d7007528.png') 0 -186px no-repeat; width: 31px; height: 24px; }
+.ico.ico_style { background: url('../img/icons-s36d7007528.png') 0 -256px no-repeat; width: 28px; height: 25px; }
 
 .category li:not(:last-child) { margin-bottom: 13px; }
 .category .category__item { display: block; position: relative; line-height: 113px; padding: 0 37px; background-image: -moz-linear-gradient(bottom, #572761 0%, #6b2f79 100%); background-image: -webkit-linear-gradient(bottom, #572761 0%, #6b2f79 100%); background-image: linear-gradient(to top, #572761 0%, #6b2f79 100%); color: white; font-size: 60px; font-size: 6rem; text-decoration: none; text-transform: uppercase; border-radius: 7px; }
-.category .category__item:after { content: ""; position: absolute; z-index: 2; top: 0; right: 0; bottom: 0; background: url('../img/icons-s1a8a19d0f1.png') 0 -222px no-repeat; width: 116px; height: 114px; opacity: 0.5; }
+.category .category__item:after { content: ""; position: absolute; z-index: 2; top: 0; right: 0; bottom: 0; background: url('../img/icons-s36d7007528.png') 0 -291px no-repeat; width: 116px; height: 114px; opacity: 0.5; }

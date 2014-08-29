@@ -1,0 +1,33 @@
+extends include/_layout
+
+block title
+	title News Detail
+
+block header
+	include include/_header
+
+block content
+	//begin topnav
+	nav.topnav
+		a(href="#").topnav__back
+		span.title.title_topnav news
+	//end topnav
+
+	.news-category.news-category_celebrity
+
+	.wrap
+		//begin news
+		a(href="#").box
+			img(src="http://placehold.it/600x298")
+			.box__footer-translucent
+				| the 14 best celebrity beach bodies of summer 2014
+		a(href="#").box
+			img(src="http://placehold.it/600x298")
+			.box__footer-translucent
+				| watch justin timberlake, demi lovato, ansel elgort, and more...
+		a(href="#").box
+			img(src="http://placehold.it/600x298")
+			.box__footer-translucent
+				| watch robin williams bring the house down while accepting the...
+		//end news
+

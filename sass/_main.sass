@@ -1,15 +1,56 @@
+.header
+	background: #FFF
+	// padding: 26px 0 25px
+	height: 79px
+	position: relative
+	+vertical
+
+.logo
+	display: inline-block
+	vertical-align: middle
+	+s(logo)
+
+.header__ico
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 80px
+	cursor: pointer
+	+vertical
+	&:after
+		content: ""
+		display: inline-block
+		vertical-align: middle
+
+.nav-btn
+	text-align: left
+	left: 0
+	&:after
+		margin-left: 20px
+		+s(menu)
+
+.home-btn
+	text-align: right
+	right: 0
+	&:after
+		margin-right: 20px
+		+s(home)
+
 .promo
 	margin-bottom: 16px
-	height: 241px
+	min-height: 241px
+	line-height: 241px
 	background-color: #593B69
-	// @include background-image(linear-gradient(to top, #572761 0%, #6B2F79 100%))
-	background: url(../img/promo-bg.jpg) 50% 50% no-repeat
+	overflow: hidden
+	@include background-image(linear-gradient(to top, #572761 0%, #6B2F79 100%))
+	// background: url(../img/promo-bg.jpg) 50% 50% no-repeat
 	+vertical
 
 .title
 	+proximabold
 	text-transform: uppercase
 	+fs(52)
+	line-height: 1
 
 	&.title_promo
 		display: inline-block
@@ -18,6 +59,7 @@
 		color: #FFF
 		+fs(120)
 		text-decoration: none
+		text-shadow: 0 0 150px #B03FCA
 		.arrow
 			// display: inline-block
 			+s(arrow)
@@ -56,8 +98,15 @@
 			&:after
 				right: -517px
 
+	&.title_topnav
+		display: inline-block
+		vertical-align: middle
+		+fs(28)
+		color: #FFF
+
 .wrap
 	padding: 0 20px 19px
+
 .header + .wrap
 	margin-top: 20px
 
@@ -65,6 +114,8 @@
 
 .slider__slide
 	font-size: 0
+	width: 100%
+	height: auto
 
 .slider__dots
 	font-size: 0
@@ -86,19 +137,24 @@
 
 .box
 	display: block
-	height: 295px
+	height: 298px
 	overflow: hidden
 	border-radius: $radius
 	position: relative
 	text-decoration: none
 	img
 		display: block
+	&:not(:first-of-type)
+		margin-top: 10px
 
 	&.box_half-left, &.box_half-right
 		display: inline-block
 		width: 295/600*100%
+		max-width: 295px
+		height: 300px
 		+box
-		&:nth-child(1n+3)
+		margin-top: 0
+		&:nth-of-type(1n+3)
 			margin-top: 11px
 
 	&.box_half-left
@@ -109,6 +165,7 @@
 
 .box__footer
 	position: absolute
+	z-index: 2
 	bottom: 0
 	left: 0
 	right: 0
@@ -117,54 +174,109 @@
 	color: #FFF
 	+fs(34)
 	text-transform: uppercase
-	&.green
-		@include background-image(linear-gradient(bottom, #7ea91b 0%, #a7d53d 100%))
-	&.yellow
-		@include background-image(linear-gradient(bottom, #cd881c 0%, #f7bf3b 100%))
-	&.blue
-		@include background-image(linear-gradient(bottom, #0a96c7 0%, #45c1eb 100%))
-	&.violet
-		@include background-image(linear-gradient(bottom, #a2379b 0%, #c35ebd 100%))
 
+.box__footer-translucent
+	position: absolute
+	z-index: 2
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 10px 15px
+	background-color: rgba(0,0,0,0.7)
+	+fs(28)
+	color: #FFF
+	line-height: 1.15
+	text-transform: uppercase
+
+=ico($name)
+	&.ico_#{$name}
+		+s($name)
+		@content
 
 .ico
 	display: inline-block
 	margin-right: 10px
 	position: relative
-	&.ico_music
-		+s(music)
-	&.ico_tv
-		+s(tv)
-	&.ico_movies
-		+s(movies)
-	&.ico_style
-		+s(style)
 
+	+ico(music)
+	+ico(music-big)
+		top: 5px
+	+ico(music-color)
+
+	+ico(tv)
+	+ico(tv-big)
+	+ico(tv-color)
+
+	+ico(movies)
+	+ico(movies-big)
+		top: 7px
+	+ico(movies-color)
+		top: 2px
+
+	+ico(style)
+
+	+ico(headlines)
+
+	+ico(fashion)
+		top: 1px
+
+	+ico(celebrity)
+		top: 2px
+
+	+ico(news)
+		top: 4px
+		left: 4px
+
+	+ico(polls)
+		top: 1px
+
+	+ico(photos)
+
+	+ico(videos)
 
 .category
 	li:not(:last-child)
 		margin-bottom: 13px
-	.category__item
-		display: block
-		position: relative
-		line-height: 113px
-		padding: 0 37px
-		@include background-image(linear-gradient(to top, #572761 0%, #6B2F79 100%))
-		color: #FFF
-		+fs(60)
-		text-decoration: none
-		text-transform: uppercase
-		border-radius: $radius
-		&:after
-			content: ""
-			position: absolute
-			z-index: 2
-			top: 0
-			right: 0
-			bottom: 0
-			+s(tick)
-			opacity: 0.5
+	&.category_promo
+		padding: 0 20px 20px
+		margin-top: -43px
+		text-align: left
+		.category__item
+			line-height: 126px
+			&:after
+				+s(tick-big)
+		.ico
+			margin-right: 35px
 
+.category__item
+	display: block
+	position: relative
+	line-height: 113px
+	padding: 0 37px
+	@include background-image(linear-gradient(to top, #572761 0%, #6B2F79 100%))
+	color: #FFF
+	+fs(60)
+	text-decoration: none
+	text-transform: uppercase
+	border-radius: $radius
+	&:after
+		content: ""
+		position: absolute
+		z-index: 2
+		top: 0
+		right: 0
+		bottom: 0
+		+s(tick)
+		opacity: 0.5
+
+.news-category
+	margin-bottom: 20px
+	// padding: 27px 20px 3px 20px
+	// +fs(50)
+	// color: #FFF
+	// text-transform: uppercase
+	&.news-category_celebrity
+		+s(news-category-celebrity)
 
 
 

@@ -1,4 +1,4 @@
-extends include/_layout.jade
+extends include/_layout
 
 block title
 	title Home
@@ -6,17 +6,23 @@ block title
 block content
 	//begin promo
 	.promo
-		a(href="#").title.title_promo vote
+		a(href="#").title.title_promo.js-voteButton vote
 			i.arrow
 		//begin category
-		.category
+		.category.category_promo.js-voteCategory(hidden)
 			ul
 				li
-					a(href="#").category__item movies
+					a(href="#").category__item.blue
+						i.ico.ico_movies-big
+						| movies
 				li
-					a(href="#").category__item tv
+					a(href="#").category__item.green
+						i.ico.ico_tv-big
+						| tv
 				li
-					a(href="#").category__item music
+					a(href="#").category__item.yellow
+						i.ico.ico_music-big
+						| music
 		//end category
 	//end promo
 	//begin wrap
@@ -24,8 +30,8 @@ block content
 		h1.title.title_news
 			span news
 		//begin slider
-		.slider
-			.slider__slide
+		.slider.js-slick
+			.slider__slide.js-slick-slide
 				a(href="#").box.box_half-left
 					img(src="http://placehold.it/295x295")
 					.box__footer.yellow
@@ -36,6 +42,18 @@ block content
 					.box__footer.green
 						i.ico.ico_tv
 						| TV
+			.slider__slide.js-slick-slide
+				a(href="#").box.box_half-left
+					img(src="http://placehold.it/295x295")
+					.box__footer.yellow
+						i.ico.ico_music
+						| MUSIC
+				a(href="#").box.box_half-right
+					img(src="http://placehold.it/295x295")
+					.box__footer.green
+						i.ico.ico_tv
+						| TV
+
 			.slider__dots
 				ul
 					li

@@ -1,0 +1,32 @@
+.green
+	@include background-image(linear-gradient(bottom, #7ea91b 0%, #a7d53d 100%))
+.yellow
+	@include background-image(linear-gradient(bottom, #cd881c 0%, #f7bf3b 100%))
+.blue
+	@include background-image(linear-gradient(bottom, #0a96c7 0%, #45c1eb 100%))
+.violet
+	@include background-image(linear-gradient(bottom, #a2379b 0%, #c35ebd 100%))
+.orange
+	@include background-image(linear-gradient(bottom, #e94c00 0%, #ff8900 100%))
+.gray
+	@include background-image(linear-gradient(top, #c6bea3 0%, #8e8873 100%))
+
+.label
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 20px
+		background-color: #2f0d37
+	&.label_blue
+		&:before
+			background-color: $blue
+	&.label_green
+		&:before
+			background-color: $green
+	&.label_yellow
+		&:before
+			background-color: $yellow

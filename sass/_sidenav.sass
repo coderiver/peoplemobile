@@ -1,0 +1,112 @@
+//------------------------------------------------------------------------------
+//
+//    #sidenav
+//
+//------------------------------------------------------------------------------
+
+.sidenav
+	position: absolute
+	z-index: 100
+	top: 0
+	left: 0
+	bottom: 0
+	width: 450/640*100%
+	background-color: $violet
+	box-shadow: (4px 0 24px rgba(77,48,92,.49))
+	+transition(0.2s linear)
+	+transform(translateX(-110%))
+	&.is-visible
+		+transform(translateX(0))
+
+
+.sidenav__header
+	position: relative
+	padding: 0 20px
+	min-height: 88px
+	+box
+	span
+		position: absolute
+		bottom: 20px
+		left: 20px
+		+fs(26)
+		text-transform: uppercase
+		color: rgba(255,255,255,0.35)
+
+.sidenav__logo
+	+hidetext
+	+s(logo-nav)
+	position: absolute
+	bottom: 20px
+	left: 25px
+
+.sidenav__list
+	li
+		background-color: #401A49
+		border: 1px solid #7e4989
+		border-width: 0 0 1px
+		&:first-child
+			border-width: 1px 0 1px
+	a
+		display: block
+		padding: 0 20px 0 60px
+		+fs(44)
+		line-height: 160px
+		color: #FFF
+		text-transform: uppercase
+		text-decoration: none
+		+text-overflow
+	&.sidenav__list-medium
+		a
+			line-height: 123px
+			+fs(36)
+	&.sidenav__list-small
+		a
+			line-height: 88px
+			+fs(36)
+	.ico
+		min-width: 75px
+		margin-right: 0
+
+.sidenav__privacy
+	display: inline-block
+	position: absolute
+	bottom: 20px
+	left: 25px
+	color: rgba(255,255,255,0.35)
+	+fs(23)
+	text-decoration: none
+	&:after
+		content: ""
+		display: inline-block
+		+s(privacy-arrow)
+		margin-left: 10px
+
+
+//------------------------------------------------------------------------------
+//
+//    #topnav
+//
+//------------------------------------------------------------------------------
+
+.topnav
+	position: relative
+	// margin-bottom: 20px
+	line-height: 68px
+	text-align: center
+	background-color: #5d3975
+	@include background-image(linear-gradient(bottom, #572761 0%, #6b2f79 100%))
+
+.topnav__back
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	+vertical
+	text-align: left
+	padding-left: 27px
+	width: 73px
+	&:after
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		+s(topnav-back)

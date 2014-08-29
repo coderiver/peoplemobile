@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>News</title>
     <!--meta(name="viewport" content="initial-scale=1")-->
     <meta name="viewport" content="width=640">
     <link rel="stylesheet" media="screen" href="css/screen.css">
@@ -31,30 +31,12 @@
       <header class="header">
         <div class="header__ico nav-btn"></div><a class="logo">People's Choice</a><a href="index.html" class="header__ico home-btn"></a>
       </header>
-      <!--begin promo-->
-      <div class="promo"><a href="#" class="title title_promo js-voteButton">vote<i class="arrow"></i></a>
-        <!--begin category-->
-        <div hidden class="category category_promo js-voteCategory">
-          <ul>
-            <li><a href="#" class="category__item blue"><i class="ico ico_movies-big"></i>movies</a></li>
-            <li><a href="#" class="category__item green"><i class="ico ico_tv-big"></i>tv</a></li>
-            <li><a href="#" class="category__item yellow"><i class="ico ico_music-big"></i>music</a></li>
-          </ul>
-        </div>
-        <!--end category-->
-      </div>
-      <!--end promo-->
-      <!--begin wrap-->
+      <!--begin topnav-->
+      <nav class="topnav"><a href="#" class="topnav__back"></a><span class="title title_topnav">news</span></nav>
+      <!--end topnav-->
       <div class="wrap">
-        <h1 class="title title_news"><span>news</span></h1>
         <!--begin slider-->
-        <div class="slider js-slick">
-          <div class="slider__slide js-slick-slide"><a href="#" class="box box_half-left"><img src="http://placehold.it/295x295">
-              <div class="box__footer yellow"><i class="ico ico_music"></i>MUSIC</div></a><a href="#" class="box box_half-right"><img src="http://placehold.it/295x295">
-              <div class="box__footer green"><i class="ico ico_tv"></i>TV</div></a></div>
-          <div class="slider__slide js-slick-slide"><a href="#" class="box box_half-left"><img src="http://placehold.it/295x295">
-              <div class="box__footer yellow"><i class="ico ico_music"></i>MUSIC</div></a><a href="#" class="box box_half-right"><img src="http://placehold.it/295x295">
-              <div class="box__footer green"><i class="ico ico_tv"></i>TV</div></a></div>
+        <div class="slider">
           <div class="slider__dots">
             <ul>
               <li></li>
@@ -63,19 +45,16 @@
               <li></li>
             </ul>
           </div>
+          <div class="slider__slide"><a href="#" class="box box_half-left"><img src="http://placehold.it/295x295">
+              <div class="box__footer gray"><i class="ico ico_headlines"></i>headlines</div></a><a href="#" class="box box_half-right"><img src="http://placehold.it/295x295">
+              <div class="box__footer blue"><i class="ico ico_movies"></i>movies</div></a><a href="#" class="box box_half-left"><img src="http://placehold.it/295x295">
+              <div class="box__footer green"><i class="ico ico_tv"></i>tv</div></a><a href="#" class="box box_half-right"><img src="http://placehold.it/295x295">
+              <div class="box__footer yellow"><i class="ico ico_music"></i>music</div></a><a href="#" class="box box_half-left"><img src="http://placehold.it/295x295">
+              <div class="box__footer violet"><i class="ico ico_fashion"></i>fashion</div></a><a href="#" class="box box_half-right"><img src="http://placehold.it/295x295">
+              <div class="box__footer orange"><i class="ico ico_celebrity"></i>celebrity</div></a></div>
         </div>
         <!--end slider-->
-        <!--begin category-->
-        <div class="category">
-          <ul>
-            <li><a href="#" class="category__item">pools</a></li>
-            <li><a href="#" class="category__item">photos</a></li>
-            <li><a href="#" class="category__item">videos</a></li>
-          </ul>
-        </div>
-        <!--end category-->
       </div>
-      <!--end wrap-->
     </div>
     <!--load scripts-->
     <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>

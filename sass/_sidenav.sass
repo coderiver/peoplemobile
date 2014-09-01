@@ -11,6 +11,7 @@
 	left: 0
 	bottom: 0
 	width: 450/640*100%
+	max-height: 1136px
 	background-color: $violet
 	box-shadow: (4px 0 24px rgba(77,48,92,.49))
 	+transition(0.2s linear)
@@ -101,12 +102,24 @@
 	top: 0
 	left: 0
 	bottom: 0
-	+vertical
 	text-align: left
 	padding-left: 27px
-	width: 73px
+	min-width: 73px
 	&:after
 		content: ""
 		display: inline-block
 		vertical-align: middle
+		height: 100%
+		width: 0
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
 		+s(topnav-back)
+	span
+		display: inline-block
+		vertical-align: middle
+		+fs(24)
+		color: #FFF
+		opacity: 0.5
+		margin-left: 20px

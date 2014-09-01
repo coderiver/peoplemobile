@@ -1,0 +1,32 @@
+extends include/_layout
+
+block title
+	title Videos
+
+block header
+	include include/_header
+
+block content
+	//begin topnav
+	nav.topnav
+		a(href="#").topnav__back
+			span Photo Gallery
+		span.title.title_topnav videos
+	//end topnav
+
+	.wrap
+		//begin videos
+		a(href="#").box.box_video
+			img(src="http://placehold.it/600x358")
+			.box__footer-translucent
+				| PCA Highlights
+		a(href="#").box.box_video
+			img(src="http://placehold.it/600x358")
+			.box__footer-translucent
+				| Welcome to People’s Choice Awards
+		a(href="#").box.box_video
+			img(src="http://placehold.it/600x358")
+			.box__footer-translucent
+				| Welcome to People’s Choice Awards
+		//end videos
+

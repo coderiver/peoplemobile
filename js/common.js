@@ -31,4 +31,32 @@ head.ready(function() {
 		useCSS: true
 	});
 
+	var linkToShow = $('.js-link')
+		blockToShow = $('.js-block');
+
+	blockToShow.hide();
+
+	linkToShow.click(function(event) {
+		$(this).siblings(blockToShow).slideToggle();
+	});
+
+	var pollOption = $('.box__list li');
+
+	pollOption.click(function(event) {
+		pollOption.removeClass('is-selected');
+		$(this).addClass('is-selected');
+	});
+
+	$('.box_polls').click(function(event) {
+		if (!$(event.target).closest('.box__hide').length) {
+			$(this).addClass('is-show-more');
+		};
+	});
+
+	$('.box__hide').click(function(event) {
+		console.log($(this).closest('.box'));
+		$(this).closest('.box').removeClass('is-show-more');
+	});
+
+
 });

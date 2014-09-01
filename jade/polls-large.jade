@@ -1,0 +1,49 @@
+extends include/_layout
+
+block title
+	title Polls Large
+
+block header
+	include include/_header
+
+block content
+	//begin topnav
+	nav.topnav
+		span.title.title_topnav polls
+	//end topnav
+
+	.wrap
+		//begin poll
+		.box.box_polls.label.label_blue
+			p Shark Week is well underway on the Discovery channel! Which shark film are you diving into to celebrate?
+			ul.box__list
+				li
+					a(href="#")
+						img(src="img/polls-img.png")
+						.box__footer-translucent Jaws
+				li
+					a(href="#")
+						img(src="http://placehold.it/580x235")
+						.box__footer-translucent Open Water
+				li
+					a(href="#")
+						img(src="http://placehold.it/580x235")
+						.box__footer-translucent Shark Tale
+				li
+					a(href="#")
+						img(src="http://placehold.it/580x235")
+						.box__footer-translucent Shark Tale
+		//end poll
+		//begin poll
+		.box.box_polls.label.label_green
+			p Shark Week is well underway on the Discovery channel! Which shark film are you diving into to celebrate?
+			ul.box__list
+				li
+					a(href="#")
+						img(src="img/polls-img.png")
+						.box__footer-translucent Jaws
+				li
+					a(href="#")
+						img(src="http://placehold.it/580x235")
+						.box__footer-translucent Shark Tale
+		//end poll

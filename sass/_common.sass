@@ -70,6 +70,16 @@ $radius: 7px
 	font-family: "Roboto-Regular"
 	font-weight: normal
 
++font("Roboto-Light", Roboto-Light)
+=roboto-l
+	font-family: "Roboto-Light"
+	font-weight: normal
+
++font("Roboto-Medium", Roboto-Medium)
+=roboto-m
+	font-family: "Roboto-Medium"
+	font-weight: normal
+
 html
 	font-size: 62.5%
 	background: #ccc
@@ -81,13 +91,22 @@ body
 
 .out
 	width: 640px
-	height: 1136px
+	// height: 1136px
 	margin: auto
-	background: #fff url(../img/bg.png) 50% 0 no-repeat
+	// background: #fff url(../img/bg.png) 50% 0 no-repeat
 	// background-attachment: fixed
 	position: relative
-	overflow: hidden
-
+	overflow-x: hidden
+	// overflow-y: scroll
+	&:after
+		content: ""
+		position: fixed
+		z-index: -100
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: #ccc url(../img/bg.png) 50% 0 no-repeat
 // common blocks
 
 

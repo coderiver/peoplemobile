@@ -1,0 +1,38 @@
+extends include/_layout
+
+block title
+	title Polls
+
+block header
+	include include/_header
+
+block content
+	//begin topnav
+	nav.topnav
+		span.title.title_topnav polls
+	//end topnav
+
+	.wrap
+		//begin polls
+		.box.box_polls.label.label_green
+			.box__in
+				p Katherine Heigl will star in the new NBC political drama series State of Affairs. Will you watch the show?
+				.box__hide
+				ul.box__list-small
+					li Yes, I’m a huge fan of hers!
+					li I need to see a trailer first.
+					li No thank you.
+		.box.box_polls.label.label_yellow
+			p Will Drake release another album in 2015, or do you think he will coast on his 2014 blockbuster hits?
+		.box.box_polls.label.label_green
+			p The Mindy Project vs. New Girl:<br>Which season finale did you watch most often?
+		.box.box_polls.label.label_blue
+			p Do you think the sequel to Avatar will live up to the high approval ratings of the original movie by James Cameron?
+		.box.box_polls.label.label_yellow
+			p Will Drake release another album in 2015, or do you think he will coast on his 2014 blockbuster hits?
+		.box.box_polls.label.label_green
+			p The Mindy Project vs. New Girl:<br>Which season finale did you watch most often?
+		.box.box_polls.label.label_blue
+			p Do you think the sequel to Avatar will live up to the high approval ratings of the original movie by James Cameron?
+		//end polls
+

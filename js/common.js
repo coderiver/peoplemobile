@@ -47,16 +47,19 @@ head.ready(function() {
 		$(this).addClass('is-selected');
 	});
 
-	$('.box_polls').click(function(event) {
-		if (!$(event.target).closest('.box__hide').length) {
-			$(this).addClass('is-show-more');
-		};
-	});
+	// $('.box_polls').click(function(event) {
+	// 	if (!$(event.target).closest('.box__list-small').length) {
+			// $('.box_polls').removeClass('is-show-more');
+			// $('.box_polls').find('.box__list-small').slideUp();
+	// 		$(this).toggleClass('is-show-more');
+	// 		$(this).find('.box__list-small').slideToggle();
+	// 	};
+	// });
 
-	$('.box__hide').click(function(event) {
-		console.log($(this).closest('.box'));
-		$(this).closest('.box').removeClass('is-show-more');
-	});
+	// $('.box__hide').click(function(event) {
+	// 	$(this).closest('.box').removeClass('is-show-more');
+	// 	$(this).siblings('.box__list-small').slideUp();
+	// });
 
 
 });

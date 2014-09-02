@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Polls Expanded</title>
+    <title>Polls Expanded Selected</title>
     <!--meta(name="viewport" content="initial-scale=1")-->
     <meta name="viewport" content="width=640">
     <link rel="stylesheet" media="screen" href="css/screen.css">
@@ -43,9 +43,15 @@
           <div class="box__hide"></div>
           <div style="display:block" class="box__list-small label label_green">
             <ul>
-              <li>Yes, I’m a huge fan of hers!</li>
-              <li>I need to see a trailer first.</li>
-              <li>No thank you.</li>
+              <li>
+                <div style="width:70%" class="box__list-percent"><span>70%</span></div><span>Yes, I’m a huge fan of hers!</span>
+              </li>
+              <li class="is-selected">
+                <div style="width:15%" class="box__list-percent"><span>15%</span></div><span>I need to see a trailer first.</span>
+              </li>
+              <li>
+                <div style="width:89%" class="box__list-percent"><span>89%</span></div><span>No thank you.</span>
+              </li>
             </ul>
           </div>
         </div>

@@ -1,7 +1,7 @@
 extends include/_layout
 
 block title
-	title Polls Expanded
+	title Polls Expanded Selected
 
 block header
 	include include/_header
@@ -19,9 +19,18 @@ block content
 			.box__hide
 			.box__list-small.label.label_green(style="display:block")
 				ul
-					li Yes, I’m a huge fan of hers!
-					li I need to see a trailer first.
-					li No thank you.
+					li
+						.box__list-percent(style="width:70%")
+							span 70%
+						span Yes, I’m a huge fan of hers!
+					li.is-selected
+						.box__list-percent(style="width:15%")
+							span 15%
+						span I need to see a trailer first.
+					li
+						.box__list-percent(style="width:89%")
+							span 89%
+						span No thank you.
 		.box.box_polls.label.label_yellow
 			p Will Drake release another album in 2015, or do you think he will coast on his 2014 blockbuster hits?
 		.box.box_polls.label.label_green

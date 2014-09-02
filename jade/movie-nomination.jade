@@ -1,0 +1,48 @@
+extends include/_layout
+
+block title
+	title Movie Nomination
+
+block header
+	include include/_header
+
+block content
+	//begin topnav
+	nav.topnav.topnav_mark
+		span.title.title_topnav news
+	//end topnav
+
+	.wrap
+		//begin movies
+		.box.box_fav.box_half-left
+			img(src="http://placehold.it/295x226")
+			.box_fav__title
+				span dallas buyers club
+		.box.box_fav.box_half-right.is-selected
+			img(src="http://placehold.it/295x226")
+			.box_fav__title
+				span the wolf<br>of wall street
+		.box.box_fav.box_half-left
+			img(src="http://placehold.it/295x226")
+			.box_fav__title
+				span 12 years a slave
+		.box.box_fav.box_half-right.is-selected
+			//- img(src="http://placehold.it/295x226")
+			img(src="img/gravity5.png")
+			.box_fav__title
+				span gravity
+		.box.box_fav.box_half-left
+			img(src="http://placehold.it/295x226")
+			.box_fav__title
+				span philomena
+		.box.box_submit.box_half-right
+			.box_submit__in
+				p
+					| tune into the<br>
+					i.logo-awards<br>
+					| only on<br>
+					i.logo-cbs<br>
+					| [date] [time]
+			.box_submit__btn
+		//end movies
+

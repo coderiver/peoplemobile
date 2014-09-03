@@ -1,0 +1,43 @@
+extends include/_layout
+
+block title
+	title Nomination Confirmation
+
+block header
+	include include/_header-logo-awards
+
+block content
+	//begin topnav
+	nav.topnav.label-h.label-h_blue
+		span.title.title_topnav favorite movie
+	//end topnav
+
+	.wrap
+		//begin confirm
+		.confirm
+			.confirm__title thanks
+				span for voting!
+			.confirm__sub Share your votes with your friends:
+			a(href="#").social-btn.social-btn_fb
+				span Share on Facebook
+			a(href="#").social-btn.social-btn_tw
+				span Share on Twitter
+			a(href="#").btn.btn_confirm next category
+		//end confirm
+
+	//begin bottomnav
+	.bottomnav
+		ul
+			li.is-active
+				a(href="#").label-h.label-h_blue
+					i.ico.ico_movies-bottomnav
+					| movies
+			li
+				a(href="#").label-h.label-h_green
+					i.ico.ico_tv-bottomnav
+					| tv
+			li
+				a(href="#").label-h.label-h_yellow
+					i.ico.ico_music-bottomnav
+					| music
+	//end bottomnav

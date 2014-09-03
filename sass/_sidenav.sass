@@ -150,3 +150,55 @@
 		color: #FFF
 		opacity: 0.5
 		margin-right: 20px
+
+
+//------------------------------------------------------------------------------
+//
+//    #bottomnav
+//
+//------------------------------------------------------------------------------
+
+.bottomnav
+	// position: fixed
+	// bottom: 0
+	// left: 0
+	// right: 0
+	background-color: #401a49
+	ul
+		font-size: 0
+		white-space: nowrap
+	li
+		display: inline-block
+		width: 33.33333%
+		box-sizing: border-box
+		border-right: 1px solid #7e4989
+		&:last-child
+			border-right: none
+	a
+		display: block
+		+fs(28)
+		+proxima-sb
+		text-transform: uppercase
+		color: rgba(255,255,255,0.35)
+		line-height: 69px
+		text-align: center
+		text-decoration: none
+	a.is-active, li.is-active
+		color: #FFF
+		a
+			color: #FFF
+		.ico_movies-bottomnav
+			+s(bottomnav-movies-c)
+		.ico_tv-bottomnav
+			+s(bottomnav-tv-c)
+		.ico_music-bottomnav
+			+s(bottomnav-music-c)
+	.ico
+		margin-right: 17px
+		top: 3px
+	.ico_movies-bottomnav
+		+s(bottomnav-movies)
+	.ico_tv-bottomnav
+		+s(bottomnav-tv)
+	.ico_music-bottomnav
+		+s(bottomnav-music)

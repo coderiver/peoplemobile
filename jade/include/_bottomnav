@@ -1,0 +1,16 @@
+//begin bottomnav
+.bottomnav
+	ul
+		li.is-active
+			a(href="#").label-h.label-h_blue
+				i.ico.ico_movies-bottomnav
+				| movies
+		li
+			a(href="#").label-h.label-h_green
+				i.ico.ico_tv-bottomnav
+				| tv
+		li
+			a(href="#").label-h.label-h_yellow
+				i.ico.ico_music-bottomnav
+				| music
+//end bottomnav

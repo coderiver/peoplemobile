@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Photos</title>
+    <title>Nomination Confirmation</title>
     <!--meta(name="viewport" content="initial-scale=1")-->
     <meta name="viewport" content="width=640">
     <link rel="stylesheet" media="screen" href="css/screen.css">
@@ -30,24 +30,30 @@
       <!--end sidenav-->
       <!--begin header-->
       <header class="header">
-        <div class="header__ico nav-btn"></div><a class="logo">People's Choice</a><a href="index.html" class="header__ico home-btn"></a>
+        <div class="header__ico nav-btn"></div><a class="logo logo_awards">People's Choice Awards</a><a href="index.html" class="header__ico home-btn"></a>
       </header>
       <!--end header-->
       <div class="content">
         <!--begin topnav-->
-        <nav class="topnav"><span class="title title_topnav">photo galleries</span><a href="#" class="topnav__next"><span>Videos</span></a></nav>
+        <nav class="topnav label-h label-h_blue"><span class="title title_topnav">favorite movie</span></nav>
         <!--end topnav-->
         <div class="wrap">
-          <div class="banner"><img src="img/banner.jpg"></div>
-          <!--begin photos--><a href="#" class="box box_half-left"><img src="http://placehold.it/295x295">
-            <div class="box__footer-translucent">People’s Choice Awards 2014:...</div></a><a href="#" class="box box_half-right"><img src="http://placehold.it/295x295">
-            <div class="box__footer-translucent">People’s Choice Awards 2014:...</div></a><a href="#" class="box box_half-left"><img src="http://placehold.it/295x295">
-            <div class="box__footer-translucent">People’s Choice Awards 2014:...</div></a><a href="#" class="box box_half-right"><img src="http://placehold.it/295x295">
-            <div class="box__footer-translucent">People’s Choice Awards 2014:...</div></a><a href="#" class="box box_half-left"><img src="http://placehold.it/295x295">
-            <div class="box__footer-translucent">People’s Choice Awards 2014:...</div></a><a href="#" class="box box_half-right"><img src="http://placehold.it/295x295">
-            <div class="box__footer-translucent">People’s Choice Awards 2014:...</div></a>
-          <!--end photos-->
+          <!--begin confirm-->
+          <div class="confirm">
+            <div class="confirm__title">thanks<span>for voting!</span></div>
+            <div class="confirm__sub">Share your votes with your friends:</div><a href="#" class="social-btn social-btn_fb"><span>Share on Facebook</span></a><a href="#" class="social-btn social-btn_tw"><span>Share on Twitter</span></a><a href="#" class="btn btn_confirm">next category</a>
+          </div>
+          <!--end confirm-->
         </div>
+        <!--begin bottomnav-->
+        <div class="bottomnav">
+          <ul>
+            <li class="is-active"><a href="#" class="label-h label-h_blue"><i class="ico ico_movies-bottomnav"></i>movies</a></li>
+            <li><a href="#" class="label-h label-h_green"><i class="ico ico_tv-bottomnav"></i>tv</a></li>
+            <li><a href="#" class="label-h label-h_yellow"><i class="ico ico_music-bottomnav"></i>music</a></li>
+          </ul>
+        </div>
+        <!--end bottomnav-->
       </div>
     </div>
     <!--load scripts-->

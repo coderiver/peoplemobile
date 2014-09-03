@@ -1,7 +1,7 @@
 extends include/_layout
 
 block title
-	title Movie Nomination
+	title Faavorite Actor
 
 block header
 	include include/_header-logo-awards
@@ -9,7 +9,7 @@ block header
 block content
 	//begin topnav
 	nav.topnav.label-h.label-h_blue
-		span.title.title_topnav favorite movie
+		span.title.title_topnav favorite movie actor
 	//end topnav
 
 	.wrap
@@ -17,24 +17,23 @@ block content
 		.box.box_fav.box_half-left
 			img(src="http://placehold.it/295x226")
 			.box_fav__title
-				span dallas buyers club
+				span Channing tatum
 		.box.box_fav.box_half-right
 			img(src="http://placehold.it/295x226")
 			.box_fav__title
-				span the wolf<br>of wall street
+				span hugh jackman
+		.box.box_fav.box_half-left.is-selected
+			img(src="img/johnny.png")
+			.box_fav__title
+				span johnny depp
+		.box.box_fav.box_half-right
+			img(src="http://placehold.it/295x226")
+			.box_fav__title
+				span tom cruise
 		.box.box_fav.box_half-left
 			img(src="http://placehold.it/295x226")
 			.box_fav__title
-				span 12 years a slave
-		.box.box_fav.box_half-right.is-selected
-			//- img(src="http://placehold.it/295x226")
-			img(src="img/gravity5.png")
-			.box_fav__title
-				span gravity
-		.box.box_fav.box_half-left
-			img(src="http://placehold.it/295x226")
-			.box_fav__title
-				span philomena
+				span brad pitt
 		.box.box_submit.box_half-right
 			.box_submit__in
 				ul

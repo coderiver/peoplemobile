@@ -1,0 +1,64 @@
+extends include/_layout
+
+block title
+	title Index
+
+block sidenav
+	//
+
+block header
+	include include/_header
+
+block content
+	.index
+		h1 INDEX
+		ol
+			li
+				a(href="home.html") home.html
+			li
+				a(href="home2.html") home2.html
+			li
+				a(href="home3.html") home3.html
+			li
+				a(href="news.html") news.html
+			li
+				a(href="news-detail.html") news-detail.html
+			li
+				a(href="videos.html") videos.html
+			li
+				a(href="polls.html") polls.html
+			li
+				a(href="polls-large.html") polls-large.html
+			li
+				a(href="polls-large-selected.html") polls-large-selected.html
+			li
+				a(href="polls-with-images.html") polls-with-images.html
+			li
+				a(href="polls-expanded.html") polls-expanded.html
+			li
+				a(href="polls-expanded-selected.html") polls-expanded-selected.html
+			li
+				a(href="photos.html") photos.html
+			li
+				a(href="photos-expanded.html") photos-expanded.html
+			li
+				a(href="movie-nomination.html") movie-nomination.html
+			li
+				a(href="nomination-confirmation.html") nomination-confirmation.html
+			li
+				a(href="favorite-actor.html") favorite-actor.html
+			li
+				a(href="thanks-for-voting-popup.html") thanks-for-voting-popup.html
+			li
+				a(href="voting-closed.html") voting-closed.html
+			li
+				a(href="bottomnav-expanded.html") bottomnav-expanded.html
+			li
+				a(href="meg-navigation.html") meg-navigation.html
+
+block other
+	style
+		|.index h1 {color: red;font-size: 50px;margin-bottom: 50px;}
+		|.index {background-color: #FFF;padding: 50px;box-sizing: border-box;}
+		|.index a {font-size: 30px;color: black;display: block;margin-bottom: 20px;}
+		|.index ol {list-style-type: decimal;padding-left:20px}

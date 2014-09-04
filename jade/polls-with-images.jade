@@ -1,17 +1,18 @@
-extends include/_layout
+extends include/_layout-topnav
 
 block title
-	title Polls
+	title Polls With Images
 
 block header
 	include include/_header
 
-block content
+block topnav
 	//begin topnav
 	nav.topnav
 		span.title.title_topnav polls
 	//end topnav
 
+block content
 	.wrap
 		//begin polls
 		.box.box_polls.label.label_green

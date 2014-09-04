@@ -1,4 +1,4 @@
-extends include/_layout
+extends include/_layout-topnav-bottomnav
 
 block title
 	title Faavorite Actor
@@ -6,12 +6,13 @@ block title
 block header
 	include include/_header-logo-awards
 
-block content
+block topnav
 	//begin topnav
 	nav.topnav.label-h.label-h_blue
 		span.title.title_topnav favorite movie actor
 	//end topnav
 
+block content
 	.wrap
 		//begin items in category
 		.box.box_fav.box_half-left
@@ -46,19 +47,5 @@ block content
 			button(type="submit").box_submit__btn share this category
 		//end items in category
 
-	//begin bottomnav
-	.bottomnav
-		ul
-			li.is-active
-				a(href="#").label-h.label-h_blue
-					i.ico.ico_movies-bottomnav
-					| movies
-			li
-				a(href="#").label-h.label-h_green
-					i.ico.ico_tv-bottomnav
-					| tv
-			li
-				a(href="#").label-h.label-h_yellow
-					i.ico.ico_music-bottomnav
-					| music
-	//end bottomnav
+block footer
+	include include/_bottomnav

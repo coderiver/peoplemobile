@@ -1,4 +1,4 @@
-extends include/_layout
+extends include/_layout-topnav
 
 block title
 	title News
@@ -6,14 +6,15 @@ block title
 block header
 	include include/_header
 
-block content
+block topnav
 	//begin topnav
 	nav.topnav
 		a(href="#").topnav__prev
 		span.title.title_topnav news
 	//end topnav
 
-	.wrap
+block content
+	.wrap.wrap_no-padding-top
 		//begin slider
 		.slider
 			.slider__dots

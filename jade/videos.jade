@@ -1,4 +1,4 @@
-extends include/_layout
+extends include/_layout-topnav
 
 block title
 	title Videos
@@ -6,7 +6,7 @@ block title
 block header
 	include include/_header
 
-block content
+block topnav
 	//begin topnav
 	nav.topnav
 		a(href="#").topnav__prev
@@ -14,6 +14,7 @@ block content
 		span.title.title_topnav videos
 	//end topnav
 
+block content
 	.wrap
 		//begin videos
 		a(href="#").box.box_video

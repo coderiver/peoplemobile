@@ -98,10 +98,10 @@ body
 	width: 640px
 	height: 1136px
 	margin: auto
+	position: relative
+	overflow: hidden
 	// background: #fff url(../img/bg.png) 50% 0 no-repeat
 	// background-attachment: fixed
-	position: relative
-	overflow-x: hidden
 	// overflow-y: scroll
 	&:after
 		content: ""
@@ -114,112 +114,22 @@ body
 		background: #ccc url(../img/bg.png) 50% 0 no-repeat
 // common blocks
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.content
+	position: fixed
+	top: 79px
+	left: 0
+	right: 0
+	bottom: 0
+	&.content_topnav
+		top: 147px
+	&.content_bottomnav
+		bottom: 77px
+	&.content_topnav-bottomnav
+		top: 147px
+		bottom: 77px
+
+.overflow-scroll
+	overflow-x: hidden
+	overflow-y: scroll
+	-webkit-overflow-scrolling: touch
 

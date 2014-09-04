@@ -6,7 +6,7 @@
 
 .sidenav
 	position: absolute
-	z-index: 100
+	z-index: 200
 	top: 0
 	left: 0
 	bottom: 0
@@ -48,6 +48,7 @@
 		&:first-child
 			border-width: 1px 0 1px
 	a
+		position: relative
 		display: block
 		padding: 0 20px 0 60px
 		+fs(44)
@@ -90,8 +91,11 @@
 //------------------------------------------------------------------------------
 
 .topnav
-	position: relative
-	// margin-bottom: 20px
+	position: fixed
+	z-index: 90
+	top: 79px
+	left: 0
+	right: 0
 	line-height: 68px
 	text-align: center
 	background-color: #5d3975
@@ -159,16 +163,18 @@
 //------------------------------------------------------------------------------
 
 .bottomnav
-	// position: fixed
-	// bottom: 0
-	// left: 0
-	// right: 0
+	position: fixed
+	bottom: 0
+	left: 0
+	right: 0
 	background-color: #401a49
+	max-height: 77px
 	ul
 		font-size: 0
 		white-space: nowrap
 	li
 		display: inline-block
+		vertical-align: top
 		width: 33.33333%
 		box-sizing: border-box
 		border-right: 1px solid #7e4989
@@ -176,11 +182,12 @@
 			border-right: none
 	a
 		display: block
+		padding-top: 8px
 		+fs(28)
 		+proxima-sb
 		text-transform: uppercase
 		color: rgba(255,255,255,0.35)
-		line-height: 69px
+		line-height: 61px
 		text-align: center
 		text-decoration: none
 	a.is-active, li.is-active
@@ -202,3 +209,140 @@
 		+s(bottomnav-tv)
 	.ico_music-bottomnav
 		+s(bottomnav-music)
+
+	&.bottomnav_simple
+		a
+			color: #f7f7f7
+			padding-top: 8px
+			box-sizing: border-box
+		li.is-active
+			a
+				color: #4b365b
+			.label-h_blue
+				background-color: $blue
+			.label-h_green
+				background-color: $green
+			.label-h_yellow
+				background-color: $yellow
+		a.is-active
+			color: #4b365b
+			&.label-h_blue
+				background-color: $blue
+			&.label-h_green
+				background-color: $green
+			&.label-h_yellow
+				background-color: $yellow
+
+.bottomnav-list
+	position: fixed
+	top: 79px
+	left: 0
+	right: 0
+	bottom: 77px
+	overflow-y: scroll
+	-webkit-overflow-scrolling: touch
+	font-size: 0
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: bottom
+		height: 100%
+		width: 0
+	ul
+		display: inline-block
+		vertical-align: bottom
+		width: 100%
+		bottom: 0
+		left: 0
+		right: 0
+	a
+		display: block
+		padding: 0 40px
+		+fs(28)
+		color: #FFF
+		text-decoration: none
+		line-height: 64px
+		background-color: $violet
+		border-bottom: 1px solid #7e4989
+	li:last-child
+		a
+			border: none
+
+
+//------------------------------------------------------------------------------
+//
+//    #meg navigation
+//
+//------------------------------------------------------------------------------
+
+.megnav
+	padding: 40px 47px
+	position: fixed
+	z-index: 96
+	top: 79px
+	bottom: 0
+	left: 0
+	right: 0
+	font-size: 0
+	background: rgba(0,0,0,0.8)
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: bottom
+		height: 100%
+		width: 0
+
+.megnav__in
+	display: inline-block
+	vertical-align: bottom
+
+.megnav__btn
+	display: block
+	position: relative
+	width: 390px
+	padding-left: 63px
+	margin-top: 39px
+	box-sizing: border-box
+	background: #FFF
+	border-radius: 7px
+	overflow: hidden
+	+fs(24)
+	line-height: 52px
+	color: #494949
+	text-decoration: none
+	&:first-of-type
+		margin-top: 0
+	i
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 49px
+		background-color: #6491c2
+		font-size: 0
+		text-align: center
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			width: 0
+			height: 100%
+		&:after
+			content: ""
+			display: inline-block
+			vertical-align: middle
+		=megico($name)
+			&.#{$name}:after
+				+s(meg-#{$name})
+		+megico(vote-now)
+		+megico(vote-female)
+		+megico(test)
+		+megico(fb)
+		+megico(inst)
+		+megico(peoples-choice)
+		+megico(tw)
+
+.megnav__btn-round
+	display: block
+	+s(meg-btn-round)
+	margin-top: 40px

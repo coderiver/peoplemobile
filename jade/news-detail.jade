@@ -1,4 +1,4 @@
-extends include/_layout
+extends include/_layout-topnav
 
 block title
 	title News Detail
@@ -6,13 +6,14 @@ block title
 block header
 	include include/_header
 
-block content
+block topnav
 	//begin topnav
 	nav.topnav
 		a(href="#").topnav__prev
 		span.title.title_topnav news
 	//end topnav
 
+block content
 	.news-category.news-category_celebrity
 
 	.wrap

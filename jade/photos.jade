@@ -1,4 +1,4 @@
-extends include/_layout
+extends include/_layout-topnav
 
 block title
 	title Photos
@@ -6,13 +6,15 @@ block title
 block header
 	include include/_header
 
-block content
+block topnav
 	//begin topnav
 	nav.topnav
 		span.title.title_topnav photo galleries
 		a(href="#").topnav__next
 			span Videos
 	//end topnav
+
+block content
 	.wrap
 		.banner
 			img(src="img/banner.jpg")

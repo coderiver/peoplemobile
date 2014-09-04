@@ -1,4 +1,4 @@
-extends include/_layout
+extends include/_layout-topnav
 
 block title
 	title Photos Expanded
@@ -6,13 +6,15 @@ block title
 block header
 	include include/_header
 
-block content
+block topnav
 	//begin topnav
 	nav.topnav
 		span.title.title_topnav photo galleries
 		a(href="#").topnav__next
 			span Videos
 	//end topnav
+
+block content
 	.wrap
 		.banner
 			img(src="img/banner.jpg")
@@ -43,10 +45,19 @@ block content
 				| People’s Choice Awards 2014:...
 		//end photos
 
-	//begin photo-viewer
-	.box.box_photo
-		.box_photo-in
-			.box__hide
-			img(src="http://placehold.it/570x778")
-			p.box__title Title placeholder area which can accomodate 2 lines of text
-	//end photo-viewer
+block other
+	//- //begin photo-viewer
+	//- .box.box_photo
+	//- 	.box_photo-in
+	//- 		.box__hide
+	//- 		img(src="http://placehold.it/570x778")
+	//- 		.box_photo__footer
+	//- 			p.box_photo__title Title placeholder area which can accomodate 2 lines of text
+	//- //end photo-viewer
+	//begin photo-popup
+	.photo-popup
+		.box__hide
+		img(src="http://placehold.it/570x778")
+		.photo-popup__footer
+			p Title placeholder area which can accomodate 2 lines of text
+	//end photo-popup

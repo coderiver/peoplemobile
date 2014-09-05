@@ -22,15 +22,6 @@ head.ready(function() {
 		voteCategoty.slideToggle();
 	});
 
-	$('.js-slick').slick({
-		arrow: true,
-		dots: true,
-		infinite: true,
-		slide: '.js-slick-slide',
-		cssEase: 'ease',
-		useCSS: true
-	});
-
 	var linkToShow = $('.js-link')
 		blockToShow = $('.js-block');
 
@@ -62,4 +53,25 @@ head.ready(function() {
 	// });
 
 
+});
+
+//slick sliders
+$('.slider').slick({
+	arrow: false,
+	dots: true,
+	infinite: false,
+	slide: '.slider__slide',
+	cssEase: 'ease',
+	useCSS: true
+});
+
+$('.topnav__slider').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	centerMode: true,
+	arrow: false,
+	infinite: false,
+	centerPadding: '10px',
+	cssEase: 'ease',
+	useCSS: true
 });

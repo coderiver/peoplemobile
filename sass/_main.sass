@@ -116,31 +116,6 @@
 	&.wrap_no-padding-top
 		padding-top: 0
 
-.slider
-
-.slider__slide
-	font-size: 0
-	width: 100%
-	height: auto
-
-.slider__dots
-	font-size: 0
-	text-align: center
-	margin: 20px 0 19px
-	ul
-		display: inline-block
-	li
-		display: inline-block
-		margin-right: 5px
-		width: 13px
-		height: 13px
-		border-radius: 50%
-		background: #aaa7a6
-		&:last-child
-			margin-right: 0
-		&.is-active
-			background: #403f3f
-
 .box
 	display: block
 	height: 298px
@@ -150,6 +125,7 @@
 	text-decoration: none
 	img
 		display: block
+		// border-radius: $radius
 	&:not(:first-of-type)
 		margin-top: 12px
 
@@ -774,6 +750,7 @@
 	background-color: #FFF
 	border-radius: $radius
 	overflow: hidden
+	box-shadow: 0 0 0 500px rgba(0,0,0,0.8)
 	img
 		display: block
 		max-width: 570px
@@ -800,3 +777,105 @@
 		vertical-align: middle
 		+fs(28)
 		line-height: 1.15
+
+
+//classes for slick slider
+.slider-wrap
+	overflow: hidden
+
+.slider
+	margin-bottom: 52px
+	margin: 0 -5px 52px
+	.slider__slide
+		font-size: 0
+		width: 610px
+		box-sizing: border-box
+	.box_half-left, .box_half-right
+		margin-left: 5px
+		margin-right: 5px
+		img
+			border-radius: $radius
+	.box__footer
+		border-bottom-left-radius: $radius
+		border-bottom-right-radius: $radius
+		+gpu
+	&.slider_dots-top
+		margin-top: 35px
+		margin-bottom: 0
+		.slick-dots
+			top: -33px
+			bottom: auto
+
+	.slick-next, .slick-prev
+		opacity: 0
+		display: none !important
+
+	.slick-dots
+		bottom: -33px
+		li
+			width: 13px
+			height: 13px
+			background-color: #aaa7a6
+			border-radius: 50%
+			margin: 0
+			margin-right: 5px
+			&:last-child
+				margin-right: 0
+			button
+				width: 13px
+				height: 13px
+				background-color: #aaa7a6
+				border-radius: 50%
+				&:before
+					content: ""
+					width: 13px
+					height: 13px
+					background-color: #aaa7a6
+					border-radius: 50%
+			&.slick-active
+				button:before
+					background-color: #403f3f
+
+// .slider__dots
+// 	font-size: 0
+// 	text-align: center
+// 	margin: 20px 0 19px
+// 	ul
+// 		display: inline-block
+// 	li
+// 		display: inline-block
+// 		margin-right: 5px
+// 		width: 13px
+// 		height: 13px
+// 		border-radius: 50%
+// 		background: #aaa7a6
+// 		&:last-child
+// 			margin-right: 0
+// 		&.is-active
+// 			background: #403f3f
+
+.topnav__slider
+	// display: inline-block
+	width: 400px
+	margin: 0 auto
+
+	.slick-list
+		overflow: visible !important
+
+	.slick-slide
+		opacity: 0.2
+		white-space: nowrap
+		text-align: center
+
+	.slick-center
+		opacity: 1
+
+	.slick-next, .slick-prev
+		opacity: 0
+		display: none !important
+
+	.title
+		display: inline-block
+		// width: auto
+		height: 68px
+		line-height: 68px
